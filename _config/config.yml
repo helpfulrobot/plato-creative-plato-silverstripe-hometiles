@@ -1,0 +1,13 @@
+---
+Name: plato-silverstripe-hometiles
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+HomePage:
+  extensions:
+    - HomePageTilesExtension
+  HomeTilesLimit: 3
+HomePage_Controller:
+  extensions:
+    - HomePageTiles_ControllerExtension

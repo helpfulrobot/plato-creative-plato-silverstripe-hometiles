@@ -1,0 +1,24 @@
+{
+  "name": "plato-creative/plato-silverstripe-hometiles",
+  "description": "Plato's Home Tiles module for the base installer",
+  "type": "silverstripe-module",
+  "homepage": "https://github.com/PlatoCreative/plato-silverstripe-hometiles",
+  "keywords": ["silverstripe", "tiles", "home", "plato"],
+  "authors": [
+    {
+      "name": "Plato Creative",
+      "email": "web@platocreative.co.nz"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/PlatoCreative/plato-silverstripe-hometiles/issues"
+  },
+  "require": {
+    "silverstripe/framework": "3.1.*",
+    "silverstripe/cms": "3.1.*",
+    "undefinedoffset/sortablegridfield": "dev-master"
+  },
+  "extra": {
+    "installer-name": "plato-hometiles"
+  }
+}
