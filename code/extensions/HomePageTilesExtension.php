@@ -39,4 +39,12 @@ class HomePageTilesExtension extends DataExtension
     public function getHomeTilesLimit() {
         return ($this->owner->config()->HomeTilesLimit ? $this->owner->config()->HomeTilesLimit : 3);
     }
+
+    /**
+     * @return Int
+     * @config()
+     */
+    public function getHomeTilesLayout() {
+        return ($this->owner->config()->HomeTilesLayout ? $this->owner->config()->HomeTilesLayout : 1);
+    }
 }
