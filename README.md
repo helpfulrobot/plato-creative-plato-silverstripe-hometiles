@@ -2,8 +2,7 @@
 Plato's Home Tiles module for the base installer. Please see requirements before installing.
 
 ### Requirements
-+ SilverStripe 3.1.*
-+ Foundation 5 (html/css framework)
++ SilverStripe 3.2.*
 
 ### Installation
 ```json
