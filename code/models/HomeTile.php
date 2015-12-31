@@ -4,7 +4,8 @@
 *
 * @package plato-silverstripe-hometiles
 */
-class HomeTile extends DataObject {
+class HomeTile extends DataObject
+{
 
     private static $default_sort = "Sort";
 
@@ -27,7 +28,8 @@ class HomeTile extends DataObject {
         "Image.CMSThumbnail" => "Image"
     );
 
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         $fields = new FieldList(
             TextField::create('Title', 'Title')->setDescription("Title of the tile"),
             TextareaField::create('Content', 'Content')->setDescription("Content of the tile"),
@@ -38,5 +40,4 @@ class HomeTile extends DataObject {
         );
         return $fields;
     }
-
 }

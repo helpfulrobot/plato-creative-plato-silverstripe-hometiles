@@ -8,11 +8,11 @@
 class HomePageTilesExtension extends DataExtension
 {
     /**
-	 * @var array
-	 */
+     * @var array
+     */
     private static $has_many = array(
-		"HomeTiles" => "HomeTile"
-	);
+        "HomeTiles" => "HomeTile"
+    );
 
     /**
      * @return FieldList
@@ -20,14 +20,16 @@ class HomePageTilesExtension extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
         $tilesConfig = new GridFieldConfig_RelationEditor();
-        if(class_exists('GridFieldSortableRows')) $tilesConfig->addComponent(new GridFieldSortableRows('Sort'));
+        if (class_exists('GridFieldSortableRows')) {
+            $tilesConfig->addComponent(new GridFieldSortableRows('Sort'));
+        }
 
         if ($this->owner->HomeTiles()->Count() == $this->owner->config()->HomeTilesLimit) {
             $tilesConfig->removeComponentsByType('GridFieldAddNewButton');
         }
 
-		$slidesGrid = GridField::create('HomeTiles', 'HomeTiles', $this->owner->HomeTiles(), $tilesConfig);
-		$fields->addFieldToTab('Root.Tiles', $slidesGrid);
+        $slidesGrid = GridField::create('HomeTiles', 'HomeTiles', $this->owner->HomeTiles(), $tilesConfig);
+        $fields->addFieldToTab('Root.Tiles', $slidesGrid);
 
         return $fields;
     }
@@ -36,7 +38,8 @@ class HomePageTilesExtension extends DataExtension
      * @return Int
      * @config()
      */
-    public function getHomeTilesLimit() {
+    public function getHomeTilesLimit()
+    {
         return ($this->owner->config()->HomeTilesLimit ? $this->owner->config()->HomeTilesLimit : 3);
     }
 
@@ -44,7 +47,8 @@ class HomePageTilesExtension extends DataExtension
      * @return Int
      * @config()
      */
-    public function getHomeTilesLayout() {
+    public function getHomeTilesLayout()
+    {
         return ($this->owner->config()->HomeTilesLayout ? $this->owner->config()->HomeTilesLayout : 1);
     }
 }
